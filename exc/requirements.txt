@@ -1,0 +1,7 @@
+alembic
+cryptography
+fastapi
+pymysql
+python-dotenv
+SQLAlchemy
+uvicorn
