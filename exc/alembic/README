@@ -1,1 +1,4 @@
-Generic single-database configuration.
+List of alemvic cmds :
+
+alembic revision --autogenerate -m "chose_name" # Generates revision
+alembic upgrade head # Applies the latest revision
