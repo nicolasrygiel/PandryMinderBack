@@ -14,10 +14,10 @@ class RecipeTable(BaseModel):
     name: Mapped[str] = mapped_column(String(255))
     created_at: Mapped[datetime] = mapped_column(
         DateTime,
-        default=datetime(tzinfo=timezone.utc)
+        default=datetime.now(timezone.utc)
     )
     updated_at: Mapped[datetime] = mapped_column(
         DateTime, 
-        default=datetime(tzinfo=timezone.utc), 
-        onupdate=datetime(tzinfo=timezone.utc)
+        default=datetime.now(timezone.utc), 
+        onupdate=datetime.now(timezone.utc)
     )

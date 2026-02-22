@@ -18,3 +18,4 @@ class BaseModel(DeclarativeBase):
             if column.name not in excluded:
                 obj[column.name] = getattr(self, column.name)
         return obj
+    

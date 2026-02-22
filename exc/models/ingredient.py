@@ -17,12 +17,12 @@ class IngredientTable(BaseModel):
     status: Mapped[int] = mapped_column(Integer)
     created_at: Mapped[datetime] = mapped_column(
         DateTime,
-        default=datetime(tzinfo=timezone.utc)
+        default=datetime.now(timezone.utc)
     )
     updated_at: Mapped[datetime] = mapped_column(
         DateTime, 
-        default=datetime(tzinfo=timezone.utc), 
-        onupdate=datetime(tzinfo=timezone.utc)
+        default=datetime.now(timezone.utc), 
+        onupdate=datetime.now(timezone.utc)
     )
 
 class IngredientTypeTable(BaseModel):
@@ -31,12 +31,12 @@ class IngredientTypeTable(BaseModel):
     name: Mapped[str] = mapped_column(String(255))
     created_at: Mapped[datetime] = mapped_column(
         DateTime,
-        default=datetime(tzinfo=timezone.utc)
+        default=datetime.now(timezone.utc)
     )
     updated_at: Mapped[datetime] = mapped_column(
         DateTime, 
-        default=datetime(tzinfo=timezone.utc), 
-        onupdate=datetime(tzinfo=timezone.utc)
+        default=datetime.now(timezone.utc), 
+        onupdate=datetime.now(timezone.utc)
     )
 
 
@@ -51,12 +51,12 @@ class IngredientStock(BaseModel):
     peremption_date: Mapped[Optional[datetime]] = mapped_column(DateTime)
     created_at: Mapped[datetime] = mapped_column(
         DateTime, 
-        default=datetime(tzinfo=timezone.utc)
+        default=datetime.now(timezone.utc)
     )
     updated_at: Mapped[datetime] = mapped_column(
         DateTime, 
-        default=datetime(tzinfo=timezone.utc), 
-        onupdate=datetime(tzinfo=timezone.utc)
+        default=datetime.now(timezone.utc), 
+        onupdate=datetime.now(timezone.utc)
     )
     
 class IngredientPrice(BaseModel):
@@ -68,11 +68,11 @@ class IngredientPrice(BaseModel):
     date: Mapped[int] = mapped_column(Integer) # TODO enum
     created_at: Mapped[datetime] = mapped_column(
         DateTime,
-        default=datetime(tzinfo=timezone.utc)
+        default=datetime.now(timezone.utc)
     )
     updated_at: Mapped[datetime] = mapped_column(
         DateTime, 
-        default=datetime(tzinfo=timezone.utc), 
-        onupdate=datetime(tzinfo=timezone.utc)
+        default=datetime.now(timezone.utc), 
+        onupdate=datetime.now(timezone.utc)
     )
     
