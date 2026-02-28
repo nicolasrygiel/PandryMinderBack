@@ -3,16 +3,18 @@ BUILD_DIR := .
 # API
 api:
 	@PYTHONPATH=$(BUILD_DIR) \
-	python api/main.py
+	uv run api/main.py
 
 # SCRIPTS
 create:
 	@PYTHONPATH=$(BUILD_DIR) \
-	python scripts/db_create.py
+	uv run scripts/db_create.py
 
+# TODO adapt to uv stuff
 install:
-	pip install -r requirements.txt
+	uv add -r requirements.txt
 
+# TODO adapt to uv
 freeze:
 	pip freeze > requirements_freeze.txt
 
