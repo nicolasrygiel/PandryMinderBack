@@ -1,4 +1,4 @@
-List of alemvic cmds :
+List of alembic cmds :
 
 alembic revision --autogenerate -m "chose_name" # Generates revision
 alembic upgrade head # Applies the latest revision
